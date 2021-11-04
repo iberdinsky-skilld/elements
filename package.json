@@ -1,0 +1,19 @@
+{
+  "name": "elements",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/iberdinsky-skilld/elements.git",
+  "author": "iberdinsky-skilld <iberdinsky@mail.skilld.fr>",
+  "license": "MIT",
+  "devDependencies": {
+    "@storybook/addon-controls": "^6.4.0-beta.26",
+    "@storybook/addon-essentials": "^6.4.0-beta.26",
+    "@storybook/html": "^6.4.0-beta.26",
+    "drupal-attribute": "^1.0.2",
+    "twig": "^1.15.4",
+    "yaml-front-matter": "^4.1.1"
+  },
+  "scripts": {
+    "storybook": "start-storybook"
+  }
+}

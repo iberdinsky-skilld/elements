@@ -1,8 +1,8 @@
 ---
 variables:
   attributes:
-    class:
-      - a-title
+    class: 'a-title'
+    data-test: 'test'
   modifiers:
     - a-title--h1
     - a-title--h2
@@ -36,7 +36,10 @@ plugins:
         COMPONENT/title.js: {}
       dependencies:
         - core/drupal
+default_content:
+  content:
+    content: 'Lorem Ipsum'
 ---
-<{{content.template_settings.tag|default('h2')}}{{attributes}}>
+<{{content.template_settings.tag|default('h2')}}{{ attributes }}>
   {{- content.content -}}
 </{{content.template_settings.tag|default('h2')}}>
