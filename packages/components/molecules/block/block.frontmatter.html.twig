@@ -1,0 +1,64 @@
+---
+meta:
+  version: 0.0.1
+variables:
+  attributes:
+    class:
+      - m-block
+  modifiers:
+    - m-block--ugly
+    - m-block--beautiful
+  region_attributes:
+    header:
+      attributes:
+        class:
+          - m-block__header
+      modifiers:
+        - m-block__header--ugly
+        - m-block__header--beautiful
+    content:
+      attributes:
+        class:
+          - m-block__content
+  template_settings:
+    icon:
+      label: 'Custom Icon'
+      description: 'Select custom icon'
+      modifiers:
+        - right
+        - left
+        - up
+        - down
+plugins:
+  layouts:
+    components_block_layout:
+      label: 'Block'
+      library: COMPONENT/block-component-styling
+      category: 'Components'
+      default_region: header
+      icon_map:
+        - [header]
+        - [content]
+      regions:
+        header:
+          label: Header
+        content:
+          label: Content
+  libraries:
+    block-component-styling:
+      version: VERSION
+      css:
+        base:
+          COMPONENT/block.css: {}
+---
+{% if content %}
+  <div{{ attributes }}>
+    <div {{ region_attributes.header.addClass('layout__region', 'layout__region--header') }}>
+      <i class="m-block__arrow m-block__arrow--{{ content.template_settings.icon|default('right') }}"></i>
+      {{ content.header }}
+    </div>
+    <div {{ region_attributes.content.addClass('layout__region', 'layout__region--content') }}>
+      {{ content.content }}
+    </div>
+  </div>
+{% endif %}

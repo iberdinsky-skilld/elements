@@ -1,0 +1,35 @@
+.m-block--ugly {
+  color: green;
+  font-size: 2rem;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+.m-block--beautiful {
+  color: black;
+  font-size: 2rem;
+  font-family: Georgia, serif;
+}
+
+/* https://www.w3schools.com/howto/howto_css_arrows.asp */
+.m-block__arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.m-block__arrow--right {
+  transform: rotate(-45deg);
+}
+
+.m-block__arrow--left {
+  transform: rotate(135deg);
+}
+
+.m-block__arrow--up {
+  transform: rotate(-135deg);
+}
+
+.m-block__arrow--down {
+  transform: rotate(45deg);
+}
