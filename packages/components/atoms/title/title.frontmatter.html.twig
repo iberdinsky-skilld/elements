@@ -1,7 +1,16 @@
 ---
+title: Title
+library:
+  css:
+    base:
+      COMPONENT/title.css: {}
+  js:
+    COMPONENT/title.js: {}
+  dependencies:
+    - core/drupal
 variables:
   attributes:
-    class: 'a-title'
+    class: 'a-title elements-title'
     data-test: 'test'
   modifiers:
     - a-title--h1
@@ -16,26 +25,13 @@ variables:
         - h2
         - h3
 plugins:
-  formatters:
-    components_title_formatter:
-      label: 'Title'
-      library: COMPONENT/title-styling
-      field_types:
-        - string
-        - string_long
-        - text
-        - text_long
-        - text_with_summary
-  libraries:
-    title-styling:
-      version: VERSION
-      css:
-        base:
-          COMPONENT/title.css: {}
-      js:
-        COMPONENT/title.js: {}
-      dependencies:
-        - core/drupal
+  formatter:
+    field_types:
+      - string
+      - string_long
+      - text
+      - text_long
+      - text_with_summary
 default_content:
   content:
     content: 'Lorem Ipsum'
