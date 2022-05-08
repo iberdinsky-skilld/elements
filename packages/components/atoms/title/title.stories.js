@@ -1,11 +1,11 @@
 import DrupalAttribute from "drupal-attribute";
 import { loadFront } from "yaml-front-matter";
 import Twig from "twig";
-import file from "!!raw-loader!./title.frontmatter.html.twig";
-import js from "!!raw-loader!./title.js";
-const data = loadFront(file);
+import template from "a_title.html.twig";
+import js from "./title.js";
+import data from './title.kaizen_component.yml'
 const template = Twig.twig({ data: data.__content });
-import { useEffect, useState } from "@storybook/client-api";
+
 
 export default {
   title: `Atoms/Title`,
@@ -47,7 +47,6 @@ export const basic = (args) => {
 
 basic.args = {
   data,
-  js,
   content: data.default_content.content.content,
   modifier: data.variables.modifiers[0],
   tag: data.variables.template_settings.tag.modifiers[0],

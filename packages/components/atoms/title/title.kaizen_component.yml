@@ -1,0 +1,38 @@
+title: Title
+library:
+  css:
+    base:
+      COMPONENT/title.css: {}
+  js:
+    https://unpkg.com/cowsay@1.5.0/build/cowsay.umd.js: { type: external, minified: true }
+    COMPONENT/title.js: {}
+  dependencies:
+    - core/drupal
+variables:
+  attributes:
+    class: 'a-title'
+    data-test: 'test'
+  modifiers:
+    - a-title--h1
+    - a-title--h2
+    - a-title--h3
+  template_settings:
+    tag:
+      label: 'Custom Tag'
+      description: 'Select html Tag'
+      modifiers:
+        - h1
+        - h2
+        - h3
+plugins:
+  formatter:
+    template: a_title
+    field_types:
+      - string
+      - string_long
+      - text
+      - text_long
+      - text_with_summary
+default_content:
+  content:
+    content: 'Lorem Ipsum'

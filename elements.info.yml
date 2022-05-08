@@ -1,10 +1,12 @@
 name: Elements
 type: theme
-base theme: classy
+base theme: false
 description: A flexible theme with a responsive, mobile-first layout.
 package: Custom
 core: 8.x
 core_version_requirement: ^8 || ^9
+libraries:
+  - elements/base
 regions:
   header: 'Header'
   primary_menu: 'Primary menu'

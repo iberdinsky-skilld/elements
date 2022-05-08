@@ -1,0 +1,11 @@
+{% if content %}
+  <div{{ attributes }}>
+    <div {{ content.header['#attributes'].addClass('layout__region', 'layout__region--header') }}>
+      <i class="m-block__arrow m-block__arrow--{{ settings.template_settings.icon|default('right') }}"></i>
+      {{ content.header }}
+    </div>
+    <div {{ content.content['#attributes'].addClass('layout__region', 'layout__region--content') }}>
+      {{ content.content }}
+    </div>
+  </div>
+{% endif %}

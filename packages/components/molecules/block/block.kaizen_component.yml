@@ -1,0 +1,48 @@
+title: Block
+meta:
+  version: 0.0.1
+library:
+  css:
+    base:
+      COMPONENT/block.css: {}
+variables:
+  attributes:
+    class:
+      - m-block
+  modifiers:
+    - m-block--ugly
+    - m-block--beautiful
+  region_attributes:
+    header:
+      attributes:
+        class:
+          - m-block__header
+      modifiers:
+        - m-block__header--ugly
+        - m-block__header--beautiful
+    content:
+      attributes:
+        class:
+          - m-block__content
+  template_settings:
+    icon:
+      label: 'Custom Icon'
+      description: 'Select custom icon'
+      modifiers:
+        - right
+        - left
+        - up
+        - down
+plugins:
+  layout:
+    template: m_block
+    category: 'Components'
+    default_region: header
+    icon_map:
+      - [header]
+      - [content]
+    regions:
+      header:
+        label: Header
+      content:
+        label: Content
